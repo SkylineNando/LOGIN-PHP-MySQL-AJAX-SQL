@@ -65,3 +65,18 @@ Consultas Parametrizadas: O uso de consultas parametrizadas no SQL previne ataqu
 Uso de Sessões: O sistema utiliza sessões para manter o estado do usuário logado e o nível de acesso.
 
 Lembre-se de sempre manter seus sistemas atualizados, aplicar medidas de segurança adequadas e considerar o uso de frameworks e bibliotecas de autenticação para evitar reinventar a roda e se beneficiar de soluções bem testadas e confiáveis.
+
+O atributo pattern é usado em elementos <input> em HTML para especificar uma expressão regular (regex) que define um padrão que o valor inserido no campo deve corresponder. No caso específico da expressão regular que você forneceu:
+```yaml
+pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+```
+Essa expressão regular é utilizada para validar senhas que atendam a certos critérios de complexidade. Vamos desmembrá-la:
+
+(?=.*\d): Isso é um lookahead positivo que verifica se há pelo menos um dígito (número) na string.
+(?=.*[a-z]): Esse é outro lookahead positivo que verifica se há pelo menos uma letra minúscula na string.
+(?=.*[A-Z]): Mais um lookahead positivo, dessa vez para verificar se há pelo menos uma letra maiúscula na string.
+.{8,}: Isso verifica se há pelo menos 8 caracteres no total.
+
+Portanto, essa expressão regular garante que a senha inserida contenha pelo menos um dígito, uma letra minúscula, uma letra maiúscula e tenha um comprimento mínimo de 8 caracteres.
+
+É importante observar que, embora essa expressão regular seja uma medida razoável para aumentar a segurança das senhas, não é a única consideração na criação de senhas seguras. Uma política de senhas robusta também pode envolver outros fatores, como evitar palavras comuns, uso de caracteres especiais, evitando informações pessoais, entre outros. Além disso, é crucial que a segurança das senhas seja combinada com práticas adequadas de armazenamento e gerenciamento de senh
