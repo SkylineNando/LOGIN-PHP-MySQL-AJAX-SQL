@@ -73,9 +73,13 @@ pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 Essa expressão regular é utilizada para validar senhas que atendam a certos critérios de complexidade. Vamos desmembrá-la:
 
 (?=.*\d): Isso é um lookahead positivo que verifica se há pelo menos um dígito (número) na string.
+
 (?=.*[a-z]): Esse é outro lookahead positivo que verifica se há pelo menos uma letra minúscula na string.
+
 (?=.*[A-Z]): Mais um lookahead positivo, dessa vez para verificar se há pelo menos uma letra maiúscula na string.
+
 .{8,}: Isso verifica se há pelo menos 8 caracteres no total.
+
 
 Portanto, essa expressão regular garante que a senha inserida contenha pelo menos um dígito, uma letra minúscula, uma letra maiúscula e tenha um comprimento mínimo de 8 caracteres.
 
