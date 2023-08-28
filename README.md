@@ -14,6 +14,7 @@ Parte 3: Script PHP para Login (login.php)
 
 php
 Copy code
+```yaml
 <?php
 session_start();
 
@@ -46,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn->close();
 }
 ?>
+```
 Parte 4: Página de Dashboard (dashboard.php)
 
 A página de dashboard será a mesma que na primeira resposta.
